@@ -1,0 +1,37 @@
+<div class="title">
+    <h1> List of Employees</h1>
+    <h1>Employee Details</h1>
+
+</div>
+
+
+
+<div class="general">
+
+
+<section class="box list">
+    <div *ngFor=" let employee of employeeList ; let i = index" class="box">
+        <div class="text">
+            <p>Name: {{employee.name}}</p>
+            <p>Position: {{employee.position}}</p>
+            <button (click)="selectEmployee(i)">Show details</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="box list" *ngIf="selectedEmployee.id != -1">
+    <app-employee-details 
+    [selectedEmployee] = "selectedEmployee"
+    [selectedIndex] = "selectedIndex"
+    (employeDeleter)="deleteEmployee($event)">
+         
+        
+    </app-employee-details>
+    
+</section>
+
+</div>

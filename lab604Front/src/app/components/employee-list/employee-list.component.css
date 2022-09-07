@@ -1,0 +1,23 @@
+.title{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.list{
+    width: 50%;
+}
+
+.text{
+    margin: 5px;
+}
+
+.box{
+    border: 1px solid;
+    
+}
+
+.general{
+    display: flex;
+    
+}
